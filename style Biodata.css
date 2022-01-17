@@ -1,0 +1,238 @@
+@import url("http://fonts.googleeapis.com/css?family=Poppins:300,400,500,600,700,800,900&display");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner{
+    width: 100%;
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(52, 10, 68);
+    font-family: sans-serif;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+body{
+    background-image: linear-gradient(rgba(44, 0, 40, 0.301),rgba(44, 0, 40, 0.308)), url('images/felps.png');
+    font-family: Arial;
+    text-align: center;
+    display: grid;
+    place-items: center; 
+}
+header{
+    text-align: center;
+    background-color: #64526e;
+    color: #fdfdfd;
+    padding-top: 8px;
+    width: 90%;
+    height: 12vh;
+}
+header h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+header p{
+    font-size: 18px;
+    font-style: italic;
+}
+.biodata{
+    flex-basis: 50%;
+    margin-top: 10px;
+}
+.biodata-img{
+    flex-basis: 50%;
+    margin: auto;
+    display: flexbox;
+    justify-content: center;
+    height: 20vh;
+    width: 40%;
+}
+.biodata-img img{
+    width: 50%;
+    border-radius: 30px;
+}
+
+/*------table-------*/
+
+table{
+    width: 800px;
+    box-shadow: -1px 12px 12px -6px rgba(0, 0, 0, 0.5);
+}
+table, td{
+    padding: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    text-align: left;
+    cursor: pointer;
+}
+td{
+    font-size: 18px;
+}
+tr:nth-child(odd){
+    background-color: lightblue;
+}
+tr:nth-child(odd):hover{
+    background-color: rgb(52, 96, 141);
+    color: #ffffff;
+    transform: scale(1.2);
+    transition: transform 300ms ease-in;
+}
+tr:nth-child(even){
+    background-color: #c4b4ce;
+}
+tr:nth-child(even):hover{
+    background-color: rgb(124, 97, 133);
+    color: #ffffff;
+    transform: scale(1.2);
+    transition: transform 300ms ease-in;
+}
+
+/*------my playlist------*/
+
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: #441253;
+}
+.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.row .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row .col img{
+    width: 80%;
+    border-radius: 30px;
+}
+.family .row{
+    margin-top: 70px;
+}
+h4{
+    font-size: 3vmin;
+    color: #000000;
+    margin: 20px auto;
+}
+p{
+    font-size: medium;
+}
+
+/*-------- footer -------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: rgb(37, 9, 48);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    position: bottom;
+    margin: 0px;
+}
+.footer h4{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 100%;
+}
+.fa:hover {
+    opacity: 0.2;
+}
+
+.fa-facebook {
+  background: #31487a00;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee00;
+  color: white;
+}
+.fa-instagram {
+    background: #b109b100;
+    color: cornsilk;
+}
+
+@media screen and (max-width:1024px) {
+    h1{
+        font-size: 20px;
+    }  
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        column-count: 3;
+    } 
+}
+
+@media screen and (max-width:425px) {
+    .container{
+        column-count: 2;
+    } 
+
+    h1 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .container{
+        column-count: 1;
+    } 
+
+    h1 {
+        font-size: 15px;
+    }
+}
